@@ -5,5 +5,5 @@
 angular.module('pingPong')
 .controller('PlayerCtrl', function($scope, Player){
 
-  $scope.players = Player.getAll(); 
+  $scope.players = Player.all(); 
 });

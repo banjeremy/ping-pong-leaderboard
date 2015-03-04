@@ -5,8 +5,12 @@
 angular.module('pingPong')
 .controller('GameCtrl', function($scope, Game, Player){
 
-  $scope.players = Player.getAll();
-  $scope.games = Game.getAll();
+  $scope.players = Player.all();
+  Game.all()
+    .success(function(games){
+      $scope.games = games;
+    });
+
   $scope.showGameForm = false;
 
   $scope.newPlayer = '';

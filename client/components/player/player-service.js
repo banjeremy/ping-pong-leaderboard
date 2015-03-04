@@ -12,7 +12,7 @@ angular.module('pingPong')
     };
 
     return {
-      getAll: function(){
+      all: function(){
         //TODO: get players from API
         return _.sortBy(players, function(player){
           return -player.wins;
