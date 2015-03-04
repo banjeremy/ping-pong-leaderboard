@@ -1,0 +1,39 @@
+<div class="row">
+  <div class="col-12-xs">
+    <h2>Games</h2>
+    <p ng-show="games.length">Click a player to choose them as the winner.</p>
+    <p ng-hide="games.length">There are no games.</p>
+    <hr />
+    <div ng-show="games.length">
+      <div ng-repeat="game in games">
+        <h4>
+          {{game.name}}
+          <small ng-if="!game.winner">
+            <a href="javascript:void(0)" ng-click="selectWinner(game, game.players[0])">{{game.players[0]}}</a>
+            vs.
+            <a href="javascript:void(0)" ng-click="selectWinner(game, game.players[1])">{{game.players[1]}}</a>
+          </small>
+          <small ng-if="game.winner">
+            {{game.winner}} won and {{game.loser}} lost!
+          </small>
+        </h4>
+        <hr />
+      </div>
+    </div>
+  </div>
+  <button ng-hide="showGameForm" class="btn btn-success" ng-click="toggleGameForm()">New Game</button>
+  <form ng-show="showGameForm" ng-submit="createGame()">
+    <div class="form-group">
+      <input ng-model="newGame.name" type="text" placeholder="Name" class="form-control">
+    </div>
+    <div class="form-group">
+      <input type="text" class="form-control" ng-model="newGame.player1" placeholder="Player 1">
+    </div>
+    <div class="form-group">
+      <input type="text" class="form-control" ng-model="newGame.player2" placeholder="Player 2">
+    </div>
+
+    <input type="submit" class="btn btn-success" ng-click="createGame()" value="Add" />
+    <button class="btn btn-danger" ng-click="toggleGameForm()">Cancel</button>
+  </form>
+</div>
