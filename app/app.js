@@ -2,7 +2,8 @@
 
 // Declare app level module which depends on views, and components
 angular.module('pingPong', [
-  'ngRoute'
+  'ngRoute',
+  'firebase'
 ]).
 config(['$routeProvider', function($routeProvider){
   $routeProvider
