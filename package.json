@@ -1,9 +1,9 @@
 {
-  "name": "angular-seed",
+  "name": "ping-pong-leaderboard",
   "private": true,
   "version": "0.0.0",
-  "description": "A starter project for AngularJS",
-  "repository": "https://github.com/angular/angular-seed",
+  "description": "A simple app to catalog ping pong game results and view top players.",
+  "repository": "https://github.com/banjeremy/ping-pong-leaderboard.git",
   "license": "MIT",
   "devDependencies": {
     "bower": "^1.3.1",

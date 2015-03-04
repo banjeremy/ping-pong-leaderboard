@@ -25,4 +25,5 @@ gulp.task('watch', function (){
   gulp.watch(['./app/**/*.js'], ['js']);
 });
 
-gulp.task('default', ['connect', 'watch']);
+gulp.task('default', ['serve']);
+gulp.task('serve', ['connect', 'watch']);
